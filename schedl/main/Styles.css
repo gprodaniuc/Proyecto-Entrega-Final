@@ -1,0 +1,455 @@
+/*
+Estilos globales
+*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+input{
+	font-size: 20px;
+	width: 60%;
+	display: block;
+	height: 45px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+    border-radius: 25px;
+    border-color: rgb(223, 223, 223);
+    background-color: #dfdfdf;
+    padding-left: 10px;
+}
+
+.colorLetras{
+	color:white;
+	text-shadow: 0px 5px 7px rgba(0,0,0,0.39);
+}
+
+.fuenteBorel{
+	font-family: "Borel", cursive;
+ 	font-weight: 400;
+  	font-style: normal;
+}
+
+.fuenteAfacad{
+	font-family: "Afacad", sans-serif;
+  	font-optical-sizing: auto;
+  	font-weight: 400;
+  	font-style: normal;
+}
+
+#seccion{
+	width: 100%;
+	height: 1000px;
+	overflow: hidden;
+}
+
+/*
+Estilo del encabezado
+*/
+#header{
+	background-color: rgb(102, 184, 123);
+	width: 100%;
+	height: 150px;
+	overflow: hidden;
+	position: fixed;
+}
+
+#logo{
+	width: 180px;
+	height: auto;
+	float: left;
+	display: block;
+	margin-left: 100px;
+	margin-top: 50px;
+	font-family: "Afacad", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+	font-size: 1.5rem;
+	color: white;
+}
+
+/*
+Estilos del encabezado en la página de iniciar sesión
+*/
+#forms_menu{
+	margin-top: 55px;
+	list-style-type: none;
+	width: auto;
+	overflow: hidden;
+	float: right;
+	margin-right: 100px;
+}
+
+.elemntMenu{
+	margin: 0px 25px;
+    width: 240px;
+    background-color: rgb(48, 124, 67);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.elemntMenu>a {
+	font-family: "Afacad", sans-serif;
+  	font-optical-sizing: auto;
+  	font-weight: 400;
+  	font-style: normal;
+	text-decoration: none;
+	font-size: 2rem;
+	color: white;
+	transition-property: color;
+	transition-duration: 0.3s;
+}
+
+.elemntMenu>a:hover{
+	color: #e9e341;
+}
+
+/*
+Estilos utilizados en la página de inicio de sesión
+*/
+#login_container{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#login_titulo{
+    width: 400px;
+	font-size: 3rem;
+	text-align: center;
+	margin-top: 40px;
+    margin-left: auto;
+	margin-right: auto;
+	text-shadow: 0px 5px 7px rgba(0,0,0,0.25);
+}
+
+#mensaje-sesionErronea{
+	text-align: center;
+	color: red;
+}
+
+#login-form{
+	width: 800px;
+	height: 204px;
+	margin-top: -15px;
+	margin-right: auto;
+    margin-left: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+#botonValidar{
+	width: 178px;
+	height: 32px;
+	font-size: 1.6rem;
+	margin-top: 28px;
+    margin-left: 38.5%;
+    background: rgb(102, 184, 123);
+    color: white;
+    border-radius: 6px;
+    border-style: none;
+    transition-property: color;
+	transition-duration: 0.3s;
+}
+
+#botonValidar:hover{
+	border-style: none;
+	background-color: rgb(48, 124, 67);
+	color: rgba(244, 244, 244, 0.891);
+	border-radius: 6px;
+}
+
+.separador{
+	width: 664px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.login_logos{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+	width: 270px;
+	overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 28px;
+}
+
+.logos{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+}
+
+.logos>a>img{
+    height: 100%;
+    width: 100%;
+}
+
+#crearUsuario-txt{
+   text-align: center;
+   margin-top: 28px;
+   font-size: 1.6rem;
+}
+
+
+#nuevoUsuario{
+    font-size: 1.6rem;
+    margin-top: 12px;
+    text-align: center;
+}
+
+#nuevoUsuario>a{
+    text-decoration: none;
+    color: black;
+    transition-property: color;
+	transition-duration: 0.3s;
+}
+
+#nuevoUsuario>a:hover{
+    color: rgb(102, 184, 123);
+}
+
+/*
+Estilos utilizados en la página de registro
+*/
+#register_container{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#register_titulo{
+    width: 600px;
+	font-size: 3rem;
+	text-align: center;
+	margin-top: 40px;
+    margin-left: auto;
+	margin-right: auto;
+	text-shadow: 0px 5px 7px rgba(0,0,0,0.25);
+}
+
+#register_form{
+	width: 800px;
+	height: 280px;
+	margin-right: auto;
+    margin-left: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: -15px;
+}
+
+#register_button{
+	width: 178px;
+	height: 32px;
+	font-size: 1.6rem;
+	margin-top: 28px;
+    margin-left: 38.5%;
+    background: rgb(102, 184, 123);
+    color: white;
+    border-radius: 6px;
+    border-style: none;
+    transition-property: color;
+	transition-duration: 0.3s;
+}
+
+#register_button:hover{
+	border-style: none;
+	background-color: rgb(48, 124, 67);
+	color: rgba(244, 244, 244, 0.891);
+	border-radius: 6px;
+}
+
+/*
+Estilos utilizados en la página de usuario creado
+*/
+#user-created_container{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#mensajeConfirmacion{
+	font-size: 2rem;
+	text-align: center;
+	margin-top: 30px;
+    padding-top: 28px;
+}
+
+.datos-user_box{
+	width: 600px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.55rem;
+	background-color: rgb(136, 136, 136, 0.1);
+	padding-left: 10px;
+	border-radius: 10px;
+	box-shadow: 0px 5px 7px rgba(0,0,0,0.25);
+}
+
+/*
+Estilos del enlace para cerrar sesión
+*/
+#cs_index{
+	height: 40px;
+    margin-top: 6px;
+	text-align: center;
+}
+
+#cs_index>a{
+    text-decoration: none;
+    color: #3E70A0;
+    transition-property: color;
+	transition-duration: 0.3s;
+}
+
+#cs_index>a:hover{
+    color: #ECC376;
+}
+
+#main_container{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.main-message_container{
+	width: 1000px;
+	height: auto;
+	margin-top: 80px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.main_message{
+	font-size: 2rem;
+	position: absolute;
+	margin-left: 10px;
+}
+
+.functions_container{
+	width: 1000px;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 133px;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  /* Style each container */
+.gestor_container{
+	height: 400px;
+	background-color: #f9f9f9;
+	width: 35%;
+	border-radius: 18px;
+	box-shadow: 0px 5px 7px rgba(0,0,0,0.25);
+}
+
+.calendario_container{
+	height: 400px;
+	background-color: #f9f9f9;
+	padding: 20px;
+	width: 60%;
+	border-radius: 18px;
+	box-shadow: 0px 5px 7px rgba(0,0,0,0.25);
+}
+
+.prx-events_message{
+	margin-top: 60px;
+	margin-left: 10px;
+}
+
+/* Style the bottom container */
+.prx-events_container{
+	width: 100%;
+	height: 90px;
+	background-color: #f9f9f9;
+	margin-top: -10px;
+	border-radius: 18px;
+	box-shadow: 0px 5px 7px rgba(0,0,0,0.25);
+}
+
+.gestor_message{
+	width: 100%;
+	height: auto;
+	font-size: 1.8rem;
+	padding-left: 25px;
+	margin-top: 22px;
+}
+
+.num-gestor_container{
+	width: 90%;
+	height: 70px;
+	font-size: 1.8rem;
+	border-radius: 18px;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: solid;
+	border-width: 0.5px;
+	border-color: rgb(48, 124, 67);
+}
+
+.num-gestor_container>p{
+	width: 100%;
+	padding-top: 13px;
+	margin-left: 8px;
+}
+
+.link-gestor_container{
+	width: 100%;
+	height: 70px;
+	margin-top: 30px;
+	text-align: center;
+	font-size: 1.8rem;
+	background-color: rgb(102, 184, 123);
+	box-shadow: 0px 0px 7px rgba(0,0,0,0.25);
+}
+
+.link-gestor_container>p{
+	width: 100%;
+	height: 14px;
+}
+
+.link-gestor_container>a{
+	color: white;
+	text-decoration: none;
+}
+
+#update-user_form{
+	width: 800px;
+	height: 400px;
+	margin-top: 50px;
+	margin-right: auto;
+    margin-left: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#boton-modificar{
+	width: 200px;
+	height: 32px;
+	font-size: 1.6rem;
+    margin-left: 38.5%;
+    background: rgb(102, 184, 123);
+    color: white;
+    border-radius: 6px;
+    border-style: none;
+    transition-property: color;
+	transition-duration: 0.3s;
+}
+
+#boton-modificar:hover{
+	border-style: none;
+	background-color: rgb(48, 124, 67);
+	color: rgba(244, 244, 244, 0.891);
+	border-radius: 6px;
+}

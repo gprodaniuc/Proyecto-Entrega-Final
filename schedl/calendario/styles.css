@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #8ac187;
+    padding: 300px;
+}
+
+#calendario {
+    background-color: white;
+    border: 1px solid #9e9e9e;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 50vw;
+    max-width: 600px;
+    height: auto;
+}
+
+#header-calendario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#header-calendario button {
+    background-color: #8ac187;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#mes-anio {
+    font-size: 1.5em;
+}
+
+#dias-semana, #dias {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#dias-semana th, #dias td {
+    width: 14.28%;
+    padding: 10px;
+    text-align: center;
+}
+
+#dias td {
+    cursor: pointer;
+    padding: 15px;
+}
+
+#dias td:hover {
+    background-color: #f0f0f0;
+}
+
+.hoy {
+    background-color: #8ac187;
+    color: white;
+    border-radius: 50%;
+}
+
+.vacio {
+    background-color: #e0e0e0;
+}
+
+

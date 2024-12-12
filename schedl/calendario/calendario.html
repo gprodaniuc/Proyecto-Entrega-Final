@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="calendario">
+        <div id="header-calendario">
+            <button id="prev">&lt;</button>
+            <div id="mes-anio"></div>
+            <button id="next">&gt;</button>
+        </div>
+        <table id="dias-semana">
+            <tr>
+                <th>Dom</th>
+                <th>Lun</th>
+                <th>Mar</th>
+                <th>Mié</th>
+                <th>Jue</th>
+                <th>Vie</th>
+                <th>Sáb</th>
+            </tr>
+        </table>
+        <table id="dias">
+            <!-- Se generarán las celdas de los días  -->
+        </table>
+    </div>
+    
+    <!-- Contenedor para la lista de eventos -->
+    <div id="eventos-lista">
+        <h2>Eventos</h2>
+        <ul id="eventos-ul">
+            <!-- Los eventos se agregarán aquí dinámicamente -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

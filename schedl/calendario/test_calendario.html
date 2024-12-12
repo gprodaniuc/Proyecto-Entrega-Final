@@ -1,0 +1,110 @@
+<!-- SIMULACION DEL ENTORNO REAL; no tiene estilos css, unicamente lo minimo para que sea legible -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Unitaria - Calendario</title>
+    <style>
+        
+        table { border-collapse: collapse; width: 80%; }
+        td { border: 1px solid #000; padding: 5px; }
+    </style>
+</head>
+<body>
+    <div id="calendario">
+        <div id="header">
+            <div id="mes-anio"></div>
+        </div>
+        <table id="dias-semana">
+            <tr>
+                <th>Dom</th>
+                <th>Lun</th>
+                <th>Mar</th>
+                <th>Mié</th>
+                <th>Jue</th>
+                <th>Vie</th>
+                <th>Sáb</th>
+            </tr>
+        </table>
+        <table id="dias">
+            <!-- Se van a generar filas en funcion de las semanas y dias como columnas -->
+
+        </table>
+    </div>
+
+    <script>
+        // Código original del calendario; añado al final la parte de pruebas
+        const diasElem = document.getElementById('dias');
+        const mesAnioElem = document.getElementById('mes-anio');
+        const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+
+        function generarCalendario(mes, anio) {
+            diasElem.innerHTML = '';
+            mesAnioElem.innerHTML = `${meses[mes]} ${anio}`;
+
+            const primerDiaMes = new Date(anio, mes, 1).getDay();
+            const diasEnMes = new Date(anio, mes + 1, 0).getDate();
+            let dia = 1;
+            let fila;
+
+            for (let semana = 0; semana < 6; semana++) {
+                fila = document.createElement('tr');
+
+                for (let i = 0; i < 7; i++) {
+                    const celda = document.createElement('td');
+
+                    if (semana === 0 && i < primerDiaMes) {
+                        celda.classList.add('vacio');
+                    } else if (dia > diasEnMes) {
+                        celda.classList.add('vacio');
+                    } else {
+                        celda.innerHTML = dia;
+                        dia++;
+                    }
+
+                    fila.appendChild(celda);
+                }
+
+                diasElem.appendChild(fila);
+                
+                if (dia > diasEnMes) break;
+            }
+        }
+
+        /*
+            FUNCIONES DE TEST
+            utilizo console.assert() para que me devuelva el error por consola en caso que haya
+        */
+
+        function testGenerarCalendario() {
+            // Prueba para octubre 2024
+            generarCalendario(1, 2024);
+
+            // Verificar que el encabezado muestra correctamente el mes y año 
+            console.assert(mesAnioElem.textContent === 'Octubre 2024', 'Fallo: Mes y año incorrectos para Octubre 2024.');
+
+            // Verificar que el número de días es 31 para Octubre
+            //Selecciono todos los elmentos td (que solo estan en la taba 'dias'), y que tengan no tengan clase .vacio
+            const diasNoVacios = diasElem.querySelectorAll('td:not(.vacio)');
+            console.assert(diasNoVacios.length === 31 || diasNoVacios.length === 31 , `Fallo: Debería tener 30/31 días, pero tiene ${diasNoVacios.length}.`);
+
+            // Prueba para Febrero 2024 que es año bisiesto
+            //Selecciono todos los elmentos td (que solo estan en la taba 'dias'), y que tengan no tengan clase .vacio
+           
+            const diasNoVaciosFeb = diasElem.querySelectorAll('td:not(.vacio)');
+            console.assert(diasNoVaciosFeb.length === 29, `Fallo: Febrero 2024 debería tener 29 días, pero tiene ${diasNoVaciosFeb.length}.`);
+            
+            // Prueba para comprobar las celdas, en este caso, que me muestra, la totalidad de celdas ;
+            // mes de junio tiene 42 celdas
+            //Selecciono todos los elmentos td (que solo estan en la taba 'dias')
+            const totalCeldas = diasElem.querySelectorAll('td');
+            console.assert(totalCeldas.length <= 42, `Fallo: Deberían generarse 42 celdas como maximo , pero se generaron ${totalCeldas.length}.`);
+        }
+            
+    
+        testGenerarCalendario();
+    </script>
+</body>
+</html>
